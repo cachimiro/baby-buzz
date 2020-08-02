@@ -3,11 +3,11 @@ html {
 }
 
 body {
-    background: url('/media/babby.jpg') no-repeat center center fixed;
+    background: url('/media/homepage_background_cropped.jpg') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
     color: #555;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Lato';
 }
 
 /* from Bulma */
@@ -26,7 +26,6 @@ body {
 .main-logo-link {
     width: fit-content;
 }
-
 
 .shop-now-button {
     background: black;
@@ -56,8 +55,19 @@ body {
 .border-black {
     border: 1px solid black !important;
 }
-.bg-black{
+
+.bg-black {
     background: #000 !important;
+}
+
+.overlay {
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	position: fixed;
+	background: white;
+	z-index: -1;
 }
 
 /* -------------------------------- Media Queries */
@@ -82,4 +92,12 @@ body {
     .header-container {
         padding-top: 164px;
     }
+}
+/* code for the products.html */
+#products-background {
+    background: none ;
+    background-size: cover;
+    height: calc(100vh - 164px);
+    color: #555;
+    font-family: 'Lato';
 }
