@@ -10,8 +10,8 @@
     {% block extra_mete %}
     {% endblock %}
     {% block corecss %}
+    <link rel="icon" type="image/png" href="media/bee.png"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link rel="icon" href="media/Original.png" type="image/gif" sizes="16x16">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
     {% endblock %}
@@ -25,7 +25,8 @@
    {% endblock %}
     {% block extra_js %}
     {% endblock %}
-    <title>Baby Buzz {% block extra_title %} {% endblock %}</title>
+    <title>Baby Buzz {% block extra_title %} {% endblock %}
+    </title>
   </head>
   <body>
     <header class="container-fluid fixed-top">
@@ -104,7 +105,21 @@
         </div>
     </header>
     {% if messages %}
-    <div class="message-container"></div>
+    <div class="message-container">
+     {% for message in messages %}
+                {% with message.level as level %}
+                    {% if level == 40 %}
+                        {% include 'include/toasts/toast_error.html' %}
+                    {% elif level == 30 %}
+                        {% include 'include/toasts/toast_warning.html' %}
+                    {% elif level == 25 %}
+                        {% include 'include/toasts/toast_success.html' %}
+                    {% else %}
+                        {% include 'include/toasts/toast_info.html' %}
+                    {% endif %}
+                {% endwith %}
+            {% endfor %}
+    </div>
     {% endif %}
     {% block page_header %}
     {% endblock %}
@@ -113,6 +128,9 @@
     {% endblock %}
 
     {% block postloadjs %}
+    <script type="text/javascript">
+        $('.toast').toast('show');
+    </script>
     {% endblock %}
     
 </body>
