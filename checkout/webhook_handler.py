@@ -15,7 +15,7 @@ class StripeWH_Handler:
     def __init__(self, request):
         self.request = request
 
-     def _send_confirmation_email(self, order):
+    def _send_confirmation_email(self, order):
         """Send the user a confirmation email"""
         cust_email = order.email
         subject = render_to_string(
@@ -88,7 +88,7 @@ class StripeWH_Handler:
                     street_address2__iexact=shipping_details.address.line2,
                     county__iexact=shipping_details.address.state,
                     grand_total=grand_total,
-                    original_bag=bag,
+                    original_bag=cart,
                     stripe_pid=pid,
                 )
                 order_exists = True
@@ -115,7 +115,7 @@ class StripeWH_Handler:
                     street_address1=shipping_details.address.line1,
                     street_address2=shipping_details.address.line2,
                     county=shipping_details.address.state,
-                    original_bag=bag,
+                    original_bag=cart,
                     stripe_pid=pid,
                 )
                 for item_id, item_data in json.loads(cart).items():
