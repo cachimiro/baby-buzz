@@ -1,0 +1,1 @@
+web: gunicorn baby_buzz.wsgi:application
