@@ -22,10 +22,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get('SECRET_KEY', '')
-
+#SECRET_KEY = ('dk93u!--dzcs^w58a_scvw4mtqjr(1wzib24$+6i78u&m==8_9')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEVELOPMENT' in os.environ
-
+#DEBUG = True
 ALLOWED_HOSTS = ['johann-baby-buzz.herokuapp.com', 'localhost']
 
 
@@ -47,6 +47,9 @@ INSTALLED_APPS = [
     'cart',
     'checkout',
     'profiles',
+    'chat',
+    'channels',
+
 
     # Other
     'crispy_forms',
@@ -111,6 +114,15 @@ LOGIN_URL = '/accounts/login/'
 LOGIN_REDIRECT_URL = '/'
 
 WSGI_APPLICATION = 'baby_buzz.wsgi.application'
+ASGI_APPLICATION = 'baby_buzz.routing.application'
+CHANNEL_LAYERS = {
+    'default': {
+        'BACKEND': 'channels_redis.core.RedisChannelLayer',
+        'CONFIG': {
+            "hosts": [('127.0.0.1', 6379)],
+        },
+    },
+}
 
 
 # Database

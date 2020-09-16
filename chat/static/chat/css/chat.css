@@ -1,0 +1,19 @@
+body{
+    background-image: none;
+}
+
+#room-name-input{
+    width: 300px;
+    border-color: #000;
+}
+#room-name-submit{
+    width: 300px;
+    margin: 10px;
+}
+.room-acces{
+    text-align: center;
+    margin-top: 10px;
+    font-size: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
