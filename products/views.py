@@ -3,7 +3,7 @@ from django.contrib import messages
 from django.db.models import Q
 from django.contrib.auth.decorators import login_required
 from django.db.models.functions import Lower
-from .models import Product, Category
+from .models import Product, Category, reviews
 from .forms import ProductForm
 
 # Create your views here.
@@ -135,3 +135,23 @@ def delete_product(request, product_id):
     product.delete()
     messages.success(request, 'Product deleted!')
     return redirect(reverse('products'))
+
+
+def add_reviews(request, product_id):
+    #return render(request, 'products/add-reviews.html')
+    if request.method == 'POST':
+          reviews = reviews.append("product_id")
+          if reviews.is_valid():
+            product = reviews.save() 
+            messages.success(request, 'Successfully added review!')
+            return redirect(reverse('product_detail', args=[product.id]))
+    else:
+        reviews = ProductForm()
+        
+    template = 'products/add-reviews.html'
+    context = {
+        'reviews': reviews
+    }
+
+    return render(request, template, context)
+
