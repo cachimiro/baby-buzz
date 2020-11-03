@@ -1,39 +1,57 @@
-<img src="https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png" style="margin: 0;">
+## BABY BUZZ
+baby buzz is a fully ecomers web site that allows for costumers to purchase products and check out. Also they get to see what the order on their profile section.
 
-Welcome cachimiro,
+## UX
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project.
+this website if for any one wanting to purcase a item of chloting and extras the reason for the nama baby buzz is because it allows for the costumer to have a name that they will remember. it desing allows it to be very easy and straight  to the point on what they wnat to do there is nothing extra on to it is very easy to use and prectical.
 
-## Gitpod Reminders
+The structure allows for the the costumer to be focused on the product secction and buy a item is very simple to use and practical. the mobile view gives it a unique touch as it is all ceterd in placed to make it apealing to human eye.
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+## Search 
+method when you search anything it will search for words in the description and title
+## ordering 
+the ordering of the item can be order from low to high price, size and rating.
 
-`python3 -m http.server`
+## Features
+# products
+the products on tha page make it easy to search
+# checkout
+nice and simple 
+# search 
+will search every word in the data base and show the items with that word
+# profile 
+you can see the purchase you made 
+# loging 
+# register
+# logout 
+for every action you will get nice massage being displayed.
+it also has the ability to log in using Google and facebook. to allow for a much quiker login experiance.
 
-A blue button should appear to click: *Make Public*,
+# Existing Features
+a lot of the fitures i have to give cretid to the mini progect done by code isntitute.
 
-Another blue button should appear to click: *Open Browser*.
+## Features Left to Implement
+ading more ways of loggiin.
+creting a amazong platform where any user can upload there product and sell them at the price thy want and take a commision from that sale.
+add a reviews section where the costumer can add the opinin of the product.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
 
-A blue button should appear to click: *Make Public*,
+JQuery
+to remove the produsct and add front end functionality 
 
-Another blue button should appear to click: *Open Browser*.
+i will do one function to be able to test it i will run the test in many ways a possible to achive  pass
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the backend lessons.
+# problems
+i am not sure if it was my laptop or what but every time i had an issue with displaying images or the registering bit, i will contact a tutor or mentor to give me advise, but when they had alook it was fine they did not get the same problem i had, which then made it frustrating to test as i could not figure out what was going on, same thing the facebook and googel log in i kept getting the error but when the tutor did it there was no problem.
 
-## Updates Since The Instructional Video
+# persnal issues
+the reason I used the same style as the boutiq ado progect is because i had some personal problems and financil issues that made ir very hard to complete the proyect and create something new. then time was running out and i had to do with what i had . i am really sorry i know this is not what you look in students.
 
-We continually tweak and adjust this template to help give you the best experience. Here are the updates since the original video was made:
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+## Deployment
+the code is stored in git hub and deplyed in heroku, i will go the heroku page and press deploy code this will manually deply the updates and the website to heroku. i will run the comands gid add . , git commit -m "", git push to push the code to git hub once that is done i will go to heroku and click on deply branch.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
---------
-
-Happy coding!
+## Credits
+# Content
+is all done from the boutique ado that i did with the code institute i used the same images and style that they used. all the inspiration for this proyect came from the code institute project.
